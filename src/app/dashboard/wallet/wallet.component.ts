@@ -11,11 +11,11 @@ declare let window: any;
 })
 export class WalletComponent implements OnInit {
 
-  private web3: Web3;
-  private walletDetails: WalletDetails;
-  private transferAmount: number;
+  public web3: Web3;
+  public walletDetails: WalletDetails;
+  public transferAmount: number;
 
-  constructor(private dashboardService: DashboardService) {
+  constructor(public dashboardService: DashboardService) {
     if (typeof window.web3 !== 'undefined') {
       this.web3 = new Web3(window.web3.currentProvider);
     }

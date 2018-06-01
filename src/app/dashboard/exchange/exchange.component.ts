@@ -12,8 +12,8 @@ import { MatSnackBar } from '@angular/material';
 })
 export class CreateOrderDialog {
 
-  private amount: number;
-  private price: number;
+  public amount: number;
+  public price: number;
 
   constructor(
     public dialogRef: MatDialogRef<CreateOrderDialog>,
@@ -52,7 +52,6 @@ export class ExchangeComponent implements OnInit {
 
   ngOnInit() {
     this.exchangeService.getOrders().subscribe((orderDetails: Array<OrderDetails>) => {
-      debugger;
       this.orders  = orderDetails;
     },
       error => {

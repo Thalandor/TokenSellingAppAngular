@@ -10,12 +10,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InvestICOComponent implements OnInit {
  
-  private tokenPrice: number;
-  private walletDetails: WalletDetails;
-  private userAddress: string;
-  private investAmount: number;
+  public tokenPrice: number;
+  public walletDetails: WalletDetails;
+  public userAddress: string;
+  public investAmount: number;
 
-  constructor(private dashboardService: DashboardService, private investICOService: InvestICOService)  { }
+  constructor(public dashboardService: DashboardService, public investICOService: InvestICOService)  { }
 
   public sendEther(){
     this.investICOService.invest(this.investAmount)

@@ -9,9 +9,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DividendComponent implements OnInit {
 
-  private pendingDividends: number;
+  public pendingDividends: number;
 
-  constructor(private dividendService: DividendService, private snackBar: MatSnackBar) { }
+  constructor(public dividendService: DividendService, public snackBar: MatSnackBar) { }
 
   ngOnInit() {
     this.dividendService.getPendingDividends().subscribe((pendingDividends: number) => {
