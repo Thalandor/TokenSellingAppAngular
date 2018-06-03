@@ -1,4 +1,8 @@
-<p>
-  <label>Pending dividends: {{pendingDividends}} ETH</label>>
-</p>
-<button mat-button (click)="claimDividends()">Buy</button>
+<div class="container-fluid">
+  <div class="row col-xs">
+    <label>Pending dividends: </label>  {{pendingDividends}} ETH
+  </div>
+  <div class="row col-xs">
+    <button mat-raised-button color="primary" (click)="claimDividends()">Claim</button>
+  </div>
+</div>

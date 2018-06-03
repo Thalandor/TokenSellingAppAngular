@@ -1,3 +1,4 @@
+import { MatSnackBar } from '@angular/material';
 import { InvestICOService } from './services/invest-ico.services';
 import { WalletDetails } from './../models/wallet.details.interface';
 import { DashboardService } from './../services/dashboard.service';
@@ -15,12 +16,14 @@ export class InvestICOComponent implements OnInit {
   public userAddress: string;
   public investAmount: number;
 
-  constructor(public dashboardService: DashboardService, public investICOService: InvestICOService)  { }
+  constructor(public dashboardService: DashboardService, public investICOService: InvestICOService, public snackBar: MatSnackBar)  { }
 
   public sendEther(){
     this.investICOService.invest(this.investAmount)
-      .subscribe(() => {
-        alert("Transaction done");
+      .subscribe((transaction: string) => {
+        this.snackBar.open('Transaction done with the number: ' + transaction, '',{
+          duration: 3000
+        });
       },
         error => {
           //this.notificationService.printErrorMessage(error);

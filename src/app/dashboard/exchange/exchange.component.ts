@@ -12,8 +12,8 @@ import { MatSnackBar } from '@angular/material';
 })
 export class CreateOrderDialog {
 
-  public amount: number;
-  public price: number;
+  private amount: number;
+  private price: number;
 
   constructor(
     public dialogRef: MatDialogRef<CreateOrderDialog>,
@@ -27,7 +27,7 @@ export class CreateOrderDialog {
 
   public createOrder() {
     this.exchangeService.createOrder(this.amount, this.price).subscribe(() => {
-      this.snackBar.open('Message archived', '',{
+      this.snackBar.open('Order created', '',{
         duration: 3000
       });
 

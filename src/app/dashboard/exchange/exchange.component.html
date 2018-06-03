@@ -1,12 +1,12 @@
-<h2>Order list</h2>
 <mat-list>
+  <h3 mat-subheader>Order list</h3>
   <mat-list-item *ngFor="let order of orders">
-    <h3 matLine> Transaction blockchain: {{order.transactionBlockchain}} </h3>
-    <h3 matLine> Transaction order: {{order.transactionId}} </h3>
-    <h3 matLine> Seller address: {{order.seller}} </h3>
-    <h3 matLine> Tokens for sell: {{order.amount}} </h3>
-    <h3 matLine> Price: {{order.price}} ETH</h3>
-    <button mat-button (click)="buyOrder(order.transactionId)">Buy</button>
+    <label matLine> Transaction blockchain: {{order.transactionBlockchain}} </label>
+    <label matLine> Transaction order: {{order.transactionId}} </label>
+    <label matLine> Seller address: {{order.seller}} </label>
+    <label matLine> Tokens for sell: {{order.amount}} </label>
+    <label matLine> Price: {{order.price}} ETH</label>
+    <a mat-raised-button color="primary" (click)="buyOrder(order.transactionId)">Buy</a>
   </mat-list-item>
 </mat-list>
-<button mat-button (click)="openDialog()">Create order</button>
+<a mat-raised-button color="primary" (click)="openDialog()">Create order</a>

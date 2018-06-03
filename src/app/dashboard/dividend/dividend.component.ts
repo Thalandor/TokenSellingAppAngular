@@ -9,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DividendComponent implements OnInit {
 
-  public pendingDividends: number;
+  public pendingDividends: number = 0;
 
   constructor(public dividendService: DividendService, public snackBar: MatSnackBar) { }
 

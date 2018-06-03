@@ -1,19 +1,25 @@
-<div class="row">
-  <div class="col-md-6 col-sm-3">
-    <p>
-      <strong>Address:</strong> {{walletDetails.address}}</p>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-xs-6">
+      <label>Address:</label> {{walletDetails.address}}
+    </div>
   </div>
-</div>
-<div class="row">
-  <div class="col-xs-6">
-    <p>
-      <strong>ETH balance:</strong> {{walletDetails.ethBalance}} ETH
-    </p>
-    <input type="number" [(ngModel)]="transferAmount">
-    <a class="btn btn-primary" (click)="sendEther()">Send ether to the account.</a>
+  <div class="row">
+    <div class="col-xs-6">
+      <label>ETH balance:</label> {{walletDetails.ethBalance}} ETH
+    </div>
   </div>
-  <div class="col-xs-6">
-    <p>
-      <strong>Token balance:</strong> {{walletDetails.tokenBalance}} tokens</p>
+  <div class="row">
+    <div class="col-xs-6">
+      <label>Token balance:</label> {{walletDetails.tokenBalance}} tokens
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-6">
+      <mat-form-field>
+        <input matInput [(ngModel)]="transferAmount" placeholder="Send ether to the account" type="number">
+      </mat-form-field>
+      <a mat-raised-button color="primary" (click)="sendEther()">Send</a>
+    </div>
   </div>
 </div>

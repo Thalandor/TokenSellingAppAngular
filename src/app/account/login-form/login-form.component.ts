@@ -52,7 +52,7 @@ export class LoginFormComponent implements OnInit, OnDestroy {
              this.router.navigate(['/dashboard/home']);             
           }
         },
-        error => this.errors = error);
+        error => {this.errors = "Error in login"});
     }
   }
 }
