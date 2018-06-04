@@ -6,7 +6,7 @@ export class ConfigService {
     _apiURI : string;
  
     constructor() {
-        this._apiURI = 'http://ivancoinwebapi.azurewebsites.net/api';
+        this._apiURI = 'https://ivancoinwebapi.azurewebsites.net/api';
      }
  
      getApiURI() {
