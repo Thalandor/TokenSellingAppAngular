@@ -12,14 +12,14 @@ import { MatSnackBar } from '@angular/material';
 })
 export class CreateOrderDialog {
 
-  private amount: number;
-  private price: number;
+  public amount: number;
+  public price: number;
 
   constructor(
     public dialogRef: MatDialogRef<CreateOrderDialog>,
     @Inject(MAT_DIALOG_DATA) public data: any,
-    private exchangeService: ExchangeService,
-    private snackBar: MatSnackBar) { }
+    public exchangeService: ExchangeService,
+    public snackBar: MatSnackBar) { }
 
   onNoClick(): void {
     this.dialogRef.close();
